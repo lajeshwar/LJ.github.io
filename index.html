@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -15,40 +16,81 @@
             background-color: seashell;
         }
 
-        .header {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 500px;
-            height: 300px;
-            margin-top: -150px;
-            margin-left: -200px;
+
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .flex-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
         }
 
-        .title {
+        .row {
+            width: auto;
+        }
 
+        .column {
+            height: auto;
+        }
+
+        .title {
             font-size: 30px;
         }
 
         .titleDescription {
-
             font-size: 20px;
         }
+
+        .flex-item {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-right: 1px;
+            padding-left: 1px;
+            width: auto;
+            height: auto;
+            text-align: center;
+        }
+
+        .topnav {
+            display: flex;
+            justify-content: center;
+            
+        }
+       
     </style>
+    <div class="topnav">
+
+        <a href="#" >Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#" >Projects</a>
+
+
+    </div>
+
 </head>
 
 <body>
 
-    <div class="header">
-        <div class="title">
-            <h1>Lajeshwar Limbu</h1>
-        </div>
+    <div class="flex-container">
+        <div class="row">
+            <div class="flex-item">
+                <div class="title">
+                    <h1>Lajeshwar Limbu</h1>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="titleDescription">
+                    <p>My portfolio and personal projects.</p>
+                </div>
+            </div>
 
-        <div class="titleDescription">
-            <p>My portfolio and personal projects.</p>
         </div>
-
     </div>
 
 
