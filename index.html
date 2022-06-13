@@ -12,12 +12,10 @@
     <style>
         * {
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: seashell;
+            font-family: serif;
+            background-color: rgb(240, 240, 225);
 
         }
-
-
 
         html,
         body {
@@ -27,12 +25,14 @@
         .flex-container-center-page {
             height: 100%;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
 
         .row {
+            max-width: fit-content;
             width: auto;
         }
 
@@ -56,29 +56,43 @@
             width: auto;
             height: auto;
             text-align: center;
-            color:rgb(49,49 ,49);
+            color: rgb(49, 49, 49);
         }
 
-        .topnav {
+        .flex-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
+            
+        }
 
+        .flex-container>div {
+           
+            width: auto;
+            margin:2%;
+            text-align: center;
+            line-height: 75px;
+            font-size: 25px;
+        }
+
+        header a {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(49, 49, 49);
+            text-decoration: none; 
         }
     </style>
-    <div class="topnav">
-
-        <a href="#">Home</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Projects</a>
-
-
-    </div>
-
 </head>
 
-<body>
+<header>
+    <div class="flex-container">
+        <div><a href="#">Home</a></div>
+        <div><a href="#">Portfolio</a></div>
+        <div><a href="#">Projects</a></div>
+    </div>
+</header>
 
-    <div class="flex-container-center-page">
+<body>
+    <div class="flex-container-center-page" style="height:70%">
         <div class="row">
             <div class="flex-item">
                 <img src="lj-lojo.svg" alt="logo">
