@@ -52,10 +52,6 @@
         }
 
         .flex-item {
-            padding-top: 1px;
-            padding-bottom: 1px;
-            padding-right: 1px;
-            padding-left: 1px;
             width: auto;
             height: auto;
             text-align: center;
@@ -66,19 +62,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-
-        }
-
-        .flex-container>div {
-
             width: auto;
             margin: 2%;
             text-align: center;
             line-height: 75px;
             font-size: 25px;
-
-
         }
+
+ 
 
         header a {
 
@@ -140,9 +131,12 @@
 
 <header>
     <div class="flex-container">
-        <div><strong><a href="#">Home</a></strong></div>
-        <div><strong><a href="#">Portfolio</a></strong></div>
-        <div><strong><a href="#">Projects</a></strong></div>
+        <div class="flex-item" style="margin: 2px">
+            <div><strong><a href="#">Home</a></strong></div>
+            <div><strong><a href="#">Portfolio</a></strong></div>
+            <div><strong><a href="#">Projects</a></strong></div>
+        </div>
+       
     </div>
 </header>
 
@@ -155,17 +149,16 @@
 
                     <img src="lj-lojo.svg" alt="logo">
                 </div>
-            </div>
-            <div class="flex-item">
+          
                 <div class="title">
                     <h1>Lajeshwar Limbu</h1>
                 </div>
-            </div>
-            <div class="flex-item">
+
                 <div class="titleDescription">
                     <p>My portfolio and personal projects.</p>
                 </div>
             </div>
+
 
         </div>
 
