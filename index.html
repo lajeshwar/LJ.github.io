@@ -63,31 +63,80 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            
+
         }
 
         .flex-container>div {
-           
+
             width: auto;
-            margin:2%;
+            margin: 2%;
             text-align: center;
             line-height: 75px;
             font-size: 25px;
-            
-          
+
+
         }
 
         header a {
-            
+
             color: rgb(49, 49, 49);
-            text-decoration: none; 
+            text-decoration: none;
+
 
         }
+
+        @keyframes pop-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @-webkit-keyframes pop-in {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(0.1);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+            }
+        }
+
+        @-moz-keyframes pop-in {
+            0% {
+                opacity: 0;
+                -moz-transform: scale(0.1);
+            }
+
+            100% {
+                opacity: 1;
+                -moz-transform: scale(1);
+            }
+        }
+
+        .flex-item {
+            -webkit-animation:pop-in 1.5s;
+            -moz-animation:pop-in 1.5s;
+            -ms-animation:pop-in 1.5s;
+        }
+        .flex-container {
+            -webkit-animation:pop-in 1.5s;
+            -moz-animation:pop-in 1.5s;
+            -ms-animation:pop-in 1.5s;
+        }
+
     </style>
 </head>
 
 <header>
-    <div class="flex-container" >
+    <div class="flex-container">
         <div><strong><a href="#">Home</a></strong></div>
         <div><strong><a href="#">Portfolio</a></strong></div>
         <div><strong><a href="#">Projects</a></strong></div>
@@ -98,7 +147,11 @@
     <div class="flex-container-center-page" style="height:65%">
         <div class="row">
             <div class="flex-item">
-                <img src="lj-lojo.svg" alt="logo">
+                <div class="logo">
+                   
+
+                    <img src="lj-lojo.svg" alt="logo">
+                </div>
             </div>
             <div class="flex-item">
                 <div class="title">
