@@ -13,8 +13,7 @@
         * {
             box-sizing: border-box;
             border-spacing: 0;
-            background-color: rgb(225 210 185);
-
+            background-color: rgb(225 210 18);
         }
 
         html,
@@ -22,12 +21,7 @@
             height: 100vh;
         }
 
-        .div {
-            aspect-ratio: 1 / 1;
-        }
-
         .flex-container-center-page {
-            height: 100%;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -76,7 +70,8 @@
         /* Responsive layout - makes a one column-layout instead of two-column layout */
         @media (max-width: 800px) {
             .flex-container {
-                flex-direction: column;
+                /*flex-direction: column;*/
+                font-size: smaller;
             }
 
             .flex-container-center-page {
