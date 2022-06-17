@@ -34,7 +34,7 @@
             text-align: center;
             font-family: serif;
             padding: 20px;
-
+            margin: 0;
         }
 
         .row {
@@ -49,12 +49,13 @@
             font-size: 30px;
         }
 
-        .titleDescription {
+        .titleDescription >p {
+            font-family: sans-serif;
             font-size: 20px;
         }
 
         .logo {
-            max-width: 100%;
+            text-align:center;
         }
 
         .flex-item {
@@ -69,24 +70,27 @@
             justify-content: center;
             width: auto;
             padding: 20px;
+            margin: 0;
         }
 
         /* Responsive layout */
         @media (max-width: 800px) {
             .title {
-                font-size: small;
+                font-size: large;
             }
 
             .titleDescription {
-                font-size: small;
+                font-size: x-small;
             }
 
             header a {
-                font-size: small;
+                font-size:larger;
             }
 
             .flex-container-center-page {
-                width: 100%;
+                
+                height: auto;
+                padding:5px;
             }
 
             img {
@@ -96,7 +100,14 @@
 
             .flex-container {
                 padding: auto;
+                margin: 0;
+            }
 
+            .arrow >src{
+                padding-top: 10px;
+            }
+            .linkedin>src{
+                padding:10px;
             }
         }
 
@@ -104,6 +115,7 @@
             margin: 20px;
             text-align: center;
             font-size: 25px;
+            margin: 0;
         }
 
         header a {
@@ -112,7 +124,7 @@
             text-decoration: none;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
-            padding: auto;
+            padding: 15px;
         }
 
         header a:hover {
@@ -173,14 +185,20 @@
             -moz-animation: pop-in 1.5s;
             -ms-animation: pop-in 1.5s;
         }
+        
+        .text-center{
+	text-align:center;
+}
+
     </style>
     <title>LJ - Home</title>
 </head>
 
 <header>
     <div class="flex-container">
-        <div><strong><a href="#">Home</a></strong></div>
-        <div><strong><a href="#">About</a></strong></div>
+        
+        <div><strong><a href="#">Home    </a></strong></div>
+        <div><strong><a href="#">About   </a></strong></div>
         <div><strong><a href="#">Projects</a></strong></div>
 
     </div>
@@ -190,25 +208,44 @@
     <div class="flex-container-center-page" style="height:65%">
         <div class="row">
             <div class="flex-item">
+
+            
                 <div class="logo">
                     <img src="lj-lojo.svg" alt="logo" width="100px" height="auto">
                 </div>
+            
 
                 <div class="title">
                     <h1>Lajeshwar Limbu</h1>
                 </div>
 
                 <div class="titleDescription" style="font-family: sans-serif;">
-                    <p>Hi there! I am Lajeshwar and this is a website for my personal projects<strong>.</strong></p>
+                    <p>Hi there! This is a website for my personal projects<strong>.</strong></p>
+                
                 </div>
             </div>
 
-
+           
+               
+         
         </div>
 
     </div>
 
 
 </body>
+<footer>
+    <nav class="text-center">
+        <div class="arrow">
+        <img src="arrow.svg" alt="linkedin logo" width="60px" height="auto" style="padding-top: 50px">
+    </div>
+    </nav>
 
+    <nav class="text-center">
+        <div class="linkedin">
+    <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top: 100px">
+
+</div>
+</nav>
+</footer>
 </html>
