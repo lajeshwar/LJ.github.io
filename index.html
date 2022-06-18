@@ -69,47 +69,10 @@
             flex-wrap: wrap;
             justify-content: center;
             width: auto;
-            padding: 20px;
+            padding: 60px;
             margin: 0;
         }
 
-        /* Responsive layout */
-        @media (max-width: 800px) {
-            .title {
-                font-size: large;
-            }
-
-            .titleDescription {
-                font-size: x-small;
-            }
-
-            header a {
-                font-size:larger;
-            }
-
-            .flex-container-center-page {
-                
-                height: auto;
-                padding:5px;
-            }
-
-            img {
-                width: 60px;
-                height: auto;
-            }
-
-            .flex-container {
-                padding: auto;
-                margin: 0;
-            }
-
-            .arrow >src{
-                padding-top: 10px;
-            }
-            .linkedin>src{
-                padding:10px;
-            }
-        }
 
         .flex-container>div {
             margin: 20px;
@@ -138,6 +101,23 @@
         }
 
 
+        .flex-item {
+            animation: normal;
+            -webkit-animation: pop-in 1.5s;
+            -moz-animation: pop-in 1.5s;
+            -ms-animation: pop-in 1.5s;
+        }
+
+        .flex-container {
+            animation: normal;
+            -webkit-animation: pop-in 1.5s;
+            -moz-animation: pop-in 1.5s;
+            -ms-animation: pop-in 1.5s;
+        }
+        
+        .text-center{
+	text-align:center;
+}
         @keyframes pop-in {
             0% {
                 opacity: 0;
@@ -174,21 +154,41 @@
             }
         }
 
-        .flex-item {
-            -webkit-animation: pop-in 1.5s;
-            -moz-animation: pop-in 1.5s;
-            -ms-animation: pop-in 1.5s;
+
+         /* Responsive layout */
+         @media (max-width: 520px) {
+            .title{
+                font-size: 25px;
+            }
+
+            .titleDescription > p{
+                font-size: 15px;
+            }
+
         }
 
-        .flex-container {
-            -webkit-animation: pop-in 1.5s;
-            -moz-animation: pop-in 1.5s;
-            -ms-animation: pop-in 1.5s;
+        @media (max-width: 470px) {
+            .flex-container{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
         }
-        
-        .text-center{
-	text-align:center;
-}
+
+        @media (max-width: 370px) {
+
+            header a {
+                padding:10px;
+            }
+
+            .flex-container{
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+           
+        }
+
+
 
     </style>
     <title>LJ - Home</title>
@@ -211,7 +211,7 @@
 
             
                 <div class="logo">
-                    <img src="lj-lojo.svg" alt="logo" width="100px" height="auto">
+                    <img src="lj-lojo.svg" alt="logo" width="70vw" height="auto">
                 </div>
             
 
@@ -236,15 +236,8 @@
 </body>
 <footer>
     <nav class="text-center">
-        <div class="arrow">
-        <img src="arrow.svg" alt="linkedin logo" width="60px" height="auto" style="padding-top: 50px">
-    </div>
-    </nav>
-
-    <nav class="text-center">
         <div class="linkedin">
     <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top: 100px">
-
 </div>
 </nav>
 </footer>
