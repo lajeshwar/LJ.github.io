@@ -49,13 +49,13 @@
             font-size: 30px;
         }
 
-        .titleDescription >p {
+        .titleDescription>p {
             font-family: sans-serif;
             font-size: 20px;
         }
 
-        .logo {
-            text-align:center;
+        .logo>img {
+            text-align: center;
         }
 
         .flex-item {
@@ -114,10 +114,11 @@
             -moz-animation: pop-in 1.5s;
             -ms-animation: pop-in 1.5s;
         }
-        
-        .text-center{
-	text-align:center;
-}
+
+        .text-center {
+            text-align: center;
+        }
+
         @keyframes pop-in {
             0% {
                 opacity: 0;
@@ -155,50 +156,66 @@
         }
 
 
-         /* Responsive layout */
-         @media (max-width: 520px) {
-            .title{
+        /* Responsive layout */
+        @media (max-width: 520px) {
+            .title {
                 font-size: 25px;
             }
 
-            .titleDescription > p{
+            .titleDescription>p {
                 font-size: 15px;
             }
-
+            .logo>img{
+                width: 60px;
+            }
         }
 
         @media (max-width: 470px) {
-            .flex-container{
+            .flex-container {
                 padding-left: 10px;
                 padding-right: 10px;
             }
-
+            .title {
+                font-size: 20px;
+            }
         }
 
         @media (max-width: 370px) {
 
             header a {
-                padding:10px;
+                padding: 10px;
             }
 
-            .flex-container{
+            .flex-container {
                 padding-left: 5px;
                 padding-right: 5px;
+            } 
+            .flex-container >div {
+                font-size: 15px;
             }
-           
+
+            .title {
+                font-size: 15px;
+            }
+
+            .logo>img {
+                width: 50px;
+            }
+
+            .flex-container-center-page {
+                height: 40%;
+            }
+
         }
-
-
-
     </style>
     <title>LJ - Home</title>
 </head>
 
 <header>
     <div class="flex-container">
-        
-        <div><strong><a href="#">Home    </a></strong></div>
-        <div><strong><a href="#">About   </a></strong></div>
+
+        <div><strong><a href="#">Home </a></strong></div>
+        <div><strong><a href="#">About </a></strong></div>
         <div><strong><a href="#">Projects</a></strong></div>
 
     </div>
@@ -209,11 +226,11 @@
         <div class="row">
             <div class="flex-item">
 
-            
+
                 <div class="logo">
                     <img src="lj-lojo.svg" alt="logo" width="70vw" height="auto">
+
                 </div>
-            
 
                 <div class="title">
                     <h1>Lajeshwar Limbu</h1>
@@ -221,13 +238,13 @@
 
                 <div class="titleDescription" style="font-family: sans-serif;">
                     <p>Hi there! This is a website for my personal projects<strong>.</strong></p>
-                
+
                 </div>
             </div>
 
-           
-               
-         
+
+
+
         </div>
 
     </div>
@@ -237,8 +254,9 @@
 <footer>
     <nav class="text-center">
         <div class="linkedin">
-    <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top: 100px">
-</div>
-</nav>
+            <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top:5px">
+        </div>
+    </nav>
 </footer>
+
 </html>
