@@ -17,22 +17,21 @@
             /* background-color: rgb(250, 235, 210);*/
 
 
-           
+
 
 
         }
 
-        html
-         {
+        html {
             height: 100vh;
             min-width: fit-content;
             background: rgb(243, 218, 167);
             background-image: url("flow.svg");
-            overflow:scroll;
-            background-repeat:no-repeat;
-            background-size:cover;
+            overflow: scroll;
+            background-repeat: no-repeat;
+            background-size: cover;
             background-clip: border-box;
-            background-blend-mode:multiply;
+            background-blend-mode: multiply;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -185,6 +184,13 @@
 
         /* Responsive layout */
         @media (max-width: 520px) {
+
+            html {
+                background-size: 227px;
+                background-position-y: 99px;
+                background-position-x: 49px;
+            }
+
             .title {
                 font-size: 25px;
             }
