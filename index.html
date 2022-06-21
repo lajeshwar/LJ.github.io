@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-<head >
+<head>
     <meta name="author" content="Lajeshwar Limbu">
     <meta name="keywords" content="HTML, CSS">
     <meta name="description" content="My personal projects">
@@ -15,26 +15,31 @@
             box-sizing: border-box;
             font-family: serif;
             /* background-color: rgb(250, 235, 210);*/
+
+
            
-            
-            /*overflow: hidden;*/
-         
-         
+
+
         }
 
-        html,
-        body {
+        html
+         {
             height: 100vh;
             min-width: fit-content;
-            background:rgb(243, 218, 167);
-            background-image: url("bird.svg");
-            background-blend-mode:soft-light;
-            background-size: auto;
-          
-            background-repeat:space;
+            background: rgb(243, 218, 167);
+            background-image: url("flow.svg");
+            overflow:scroll;
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-clip: border-box;
+            background-blend-mode:multiply;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
         }
 
         .flex-container-center-page {
+
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -71,7 +76,7 @@
             width: auto;
             text-align: center;
             color: rgb(49, 49, 49);
-          
+
         }
 
         .flex-container {
@@ -240,7 +245,7 @@
 <header>
     <div class="flex-container">
 
-        <div><strong><a href="#" >Home </a></strong></div>
+        <div><strong><a href="#">Home </a></strong></div>
         <div><strong><a href="#">About </a></strong></div>
         <div><strong><a href="#">Projects</a></strong></div>
 
@@ -269,8 +274,8 @@
 
 
             </div>
-           
-            
+
+
 
         </div>
 
@@ -279,15 +284,15 @@
 
 
 </body>
-<footer >
-    <div class="footer-container">
-    <nav class="text-center">
-        <div class="linkedin">
-            <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top:5px">
-        </div>
-    </nav>
+<footer>
+    <footer class="footer-container">
+        <nav class="text-center">
+            <div class="linkedin">
+                <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top:5px">
+            </div>
+        </nav>
 
-    </div>
-</footer>
+        </div>
+    </footer>
 
 </html>
