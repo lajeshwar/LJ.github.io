@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-<head>
+<head >
     <meta name="author" content="Lajeshwar Limbu">
     <meta name="keywords" content="HTML, CSS">
     <meta name="description" content="My personal projects">
@@ -15,15 +15,23 @@
             box-sizing: border-box;
             font-family: serif;
             /* background-color: rgb(250, 235, 210);*/
-            background-color: rgb(243, 218, 167);
-
-            overflow: hidden;
+           
+            
+            /*overflow: hidden;*/
+         
+         
         }
 
         html,
         body {
             height: 100vh;
             min-width: fit-content;
+            background:rgb(243, 218, 167);
+            background-image: url("bird.svg");
+            background-blend-mode:soft-light;
+            background-size: auto;
+          
+            background-repeat:space;
         }
 
         .flex-container-center-page {
@@ -63,6 +71,7 @@
             width: auto;
             text-align: center;
             color: rgb(49, 49, 49);
+          
         }
 
         .flex-container {
@@ -118,11 +127,18 @@
 
         .text-center {
             text-align: center;
-            position:fixed;bottom:0;left:0;right:0;height:50px;
             animation: normal;
             -webkit-animation: pop-in 1.5s;
             -moz-animation: pop-in 1.5s;
             -ms-animation: pop-in 1.5s;
+        }
+
+        .footer-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
         }
 
         @keyframes pop-in {
@@ -215,7 +231,7 @@
             }
 
             .flex-container-center-page {
-                height:50%
+                height: 50%
             }
     </style>
     <title>LJ - Home</title>
@@ -224,7 +240,7 @@
 <header>
     <div class="flex-container">
 
-        <div><strong><a href="#">Home </a></strong></div>
+        <div><strong><a href="#" >Home </a></strong></div>
         <div><strong><a href="#">About </a></strong></div>
         <div><strong><a href="#">Projects</a></strong></div>
 
@@ -235,7 +251,6 @@
     <div class="flex-container-center-page">
         <div class="row">
             <div class="flex-item">
-
 
                 <div class="logo">
                     <img src="lj-lojo.svg" alt="logo" width="70vw" height="auto">
@@ -250,23 +265,29 @@
                     <p>Hi there! This is a website for my personal projects<strong>.</strong></p>
 
                 </div>
+
+
+
             </div>
-
-
-
+           
+            
 
         </div>
+
 
     </div>
 
 
 </body>
-<footer>
+<footer >
+    <div class="footer-container">
     <nav class="text-center">
         <div class="linkedin">
             <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top:5px">
         </div>
     </nav>
+
+    </div>
 </footer>
 
 </html>
