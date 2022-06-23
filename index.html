@@ -11,30 +11,21 @@
     <script type="text/javascript" src="https://livejs.com/live.js">
     </script>
     <style>
+          @import url('https://fonts.googleapis.com/css?family=Open Sans');
         * {
             box-sizing: border-box;
-            font-family: serif;
             /* background-color: rgb(250, 235, 210);*/
-
-
-
-
-
+          
         }
 
         html {
-            height: 100vh;
             min-width: fit-content;
             background: rgb(243, 218, 167);
-            background-image: url("flow.svg");
-            overflow: scroll;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-clip: border-box;
-            background-blend-mode: multiply;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
+        }
+
+        body {
+            
+            height: 100vh;
         }
 
         .flex-container-center-page {
@@ -47,7 +38,7 @@
             font-family: serif;
             padding: 20px;
             margin: 0;
-            height: 65%;
+
         }
 
         .row {
@@ -59,11 +50,12 @@
         }
 
         .title {
+            font-family: serif;
             font-size: 30px;
         }
 
         .titleDescription>p {
-            font-family: sans-serif;
+            font-family: Open Sans;
             font-size: 20px;
         }
 
@@ -244,6 +236,7 @@
             .flex-container-center-page {
                 height: 50%
             }
+        }
     </style>
     <title>LJ - Home</title>
 </head>
@@ -259,7 +252,8 @@
 </header>
 
 <body>
-    <div class="flex-container-center-page">
+
+    <div class="flex-container-center-page" style="height:65%">
         <div class="row">
             <div class="flex-item">
 
@@ -298,7 +292,7 @@
             </div>
         </nav>
 
-        </div>
+
     </footer>
 
 </html>
