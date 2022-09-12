@@ -17,106 +17,22 @@
             font-family: 'Open Sans'};
 
         * {
+        
             box-sizing: border-box;
+        }
+        body {
+            height: 90vh;
         }
 
         html {
             min-width: fit-content;
-            background: rgb(150, 181, 147);
+            background: rgb(153, 177, 150);
             background-image: url('bg-2.png');
             background-repeat: no-repeat;
             background-size:cover;
             background-position: center;
             min-height: 100%;
         } 
-
-        body {
-            height: 100vh
-            
-          
-        }
-
-        .flex-container-center-page {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0px;
-            margin: 0px;
-        }
-   
-        .row {
-            width: auto;
-        }
-
-        .column {
-            height: auto;
-        }
-
-        .title >h1 {
-            font-display: fallback;
-            font-family: serif;
-            font-size: 55px;
-            margin-top: 30px;
-            margin-bottom: 0px;
-        }
-
-        .titleDescription{
-            height: 30px;
-        }
-        .titleDescription>p {
-            font-display: fallback;
-            font-family: Open Sans;
-            font-size: 15px;
-        
-        }
-
-        .logo>img {
-            text-align: center;
-
-        }
-
-        .nav-container>.logo>img {
-            position: relative;
-            margin: 0;
-            padding: 0;
-            width: 150px;
-            z-index: 2;
-
-        }
-
-
-        .flex-item {
-            width: auto;
-            text-align: center;
-            color: rgb(49, 49, 49);
-
-        }
-
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: auto;
-            padding: 60px;
-            margin: 0;
-        }
-
-
-        .flex-container>div {
-            margin: 20px;
-            text-align: center;
-            font-size: 25px;
-            margin: 0;
-        }
-
-        .container-max {
-            margin: 0 auto;
-            padding: 0 30px;
-            max-width: 1340px;
-        }
-
 
         header {
             display: flex;
@@ -157,6 +73,70 @@
         }
 
 
+        .flex-container-center-page {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+        }
+   
+        .row {
+            width: auto;
+        }
+
+        .column {
+            height: auto;
+        }
+
+        .title >h1 {
+            font-display: fallback;
+            font-family: serif;
+            font-size: 55px;
+            margin-top: 30px;
+            margin-bottom: 0px;
+        }
+
+        .titleDescription{
+            height: 30px;
+        }
+        .titleDescription>p {
+            font-display: fallback;
+            font-family: Open Sans;
+            font-size: 15px;
+        
+        }
+
+        .logo>img {
+            text-align: center;
+        }
+
+        .flex-item {
+            width: auto;
+            text-align: center;
+            color: rgb(49, 49, 49);
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: auto;
+            padding: 60px;
+            margin: 0;
+        }
+
+
+        .flex-container>div {
+            margin: 20px;
+            text-align: center;
+            font-size: 25px;
+            margin: 0;
+        }
+
+
         .flex-item {
             animation: normal;
             -webkit-animation: pop-in 1.5s;
@@ -178,7 +158,6 @@
             -moz-animation: pop-in 1.5s;
             -ms-animation: pop-in 1.5s;
         }
-
         .nav {
             display: flex;
             justify-content: space-between;
@@ -198,10 +177,18 @@
 
         .nav-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             flex: 1;
             position:relative;
+        }
+
+        .nav-container>.logo>img {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 150px;
+            z-index: 2;
         }
 
         .nav-items {
@@ -216,19 +203,12 @@
 
         .footer-container{
             background-color: rgb(49, 49, 49);
-            margin: 0px;
             position: absolute;
-            top: 94%;
-            left: 0;
-            width: 100%;
-            height: 80px;   
-            display:flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-        }
-        .linkedin-padding{
-            padding-top: 15px;
+            width: 100%;
+            left:0;
+            bottom: 0;
+           display:table-row;
         }
 
         @keyframes pop-in {
@@ -338,28 +318,30 @@
     <title>LJ - Home</title>
 </head>
 
-<header>
-    <div class="nav">
-        <div class="nav-container container-max">
-            
-            <a class="logo" href="#">
-                <img src="lj-lojo-white.svg" alt="logo">
-            </a>
 
-            <div class="nav-items">
-                <div class="home"><a href="#">HOME </a></div>
-                <div class="portfolio"><a href="#">PORTFOLIO </a></div>
-                <div class="contact"><a href="#">CONTACT</a></div>
-                <div class="menu"><img src="menu-white.svg" style="width: 30px"></div>
-            </div>
-
-
-
-        </div>
-    </div>
-</header>
 
 <body>
+
+    <header>
+        <div class="nav">
+            <div class="nav-container container-max">
+                
+                <a class="logo" href="#">
+                    <img src="lj-lojo-white.svg" alt="logo">
+                </a>
+    
+                <div class="nav-items">
+                    <div class="home"><a href="#">HOME </a></div>
+                    <div class="portfolio"><a href="#">PORTFOLIO </a></div>
+                    <div class="contact"><a href="#">CONTACT</a></div>
+                    <div class="menu"><img src="menu-white.svg" style="width: 30px"></div>
+                </div>
+    
+    
+    
+            </div>
+        </div>
+    </header>
 
     <div class="flex-container-center-page" style="height:48%" > 
         <div class="row">
@@ -393,14 +375,10 @@
     </div>
 
     <footer class="footer-container">
-        
-        <div class="row">
-            <div class="linkedin-padding flex-item" >
-               <a href="https://www.linkedin.com/in/lajeshwar-limbu "target="_blank"> <img src="linkedin.svg" alt="linkedin logo" width="100px" height="auto" > </a>
-
-                <p style="font-size: 10px;color: aliceblue;font-family: Open Sans; font-weight:lighter; ">All background images are generated using Midjourney AI.</p>
-            </div>
-        </div>
+       
+               <a href="https://www.linkedin.com/in/lajeshwar-limbu "target="_blank"> <img src="linkedin.svg" alt="linkedin logo" width="100px" height="auto" style="padding-top: 10px;" > </a>
+                <p style="font-size: 10px;color: aliceblue;font-family: Open Sans; font-weight:lighter;margin: 0; padding-bottom:10px; ">All background images are generated using Midjourney AI.</p>
+      
 
     </footer>
    
