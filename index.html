@@ -14,7 +14,6 @@
        
         @font-face {
             
-            
             src: url('https://fonts.googleapis.com/css?family=Open Sans');
             font-family: 'Open Sans'};
 
@@ -24,24 +23,30 @@
 
         html {
             min-width: fit-content;
-            background: rgb(243, 218, 167);
-        }
+            background: rgb(150, 181, 147);
+            background-image: url('bg2.png');
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+        
+        } 
 
         body {
-            height: 100vh;
+            height: 100vh
+             
+          
         }
 
         .flex-container-center-page {
-
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 20px;
-            margin: 0;
+            padding: 0px;
+            margin: 0px;
         }
-
+   
         .row {
             width: auto;
         }
@@ -50,16 +55,22 @@
             height: auto;
         }
 
-        .title {
+        .title >h1 {
             font-display: fallback;
             font-family: serif;
-            font-size: 30px;
+            font-size: 55px;
+            margin-top: 30px;
+            margin-bottom: 0px;
         }
 
+        .titleDescription{
+            height: 30px;
+        }
         .titleDescription>p {
             font-display: fallback;
             font-family: Open Sans;
-            font-size: 20px;
+            font-size: 15px;
+        
         }
 
         .logo>img {
@@ -115,7 +126,7 @@
             margin: 0;
             padding: 0;
             position: fixed;
-            top: 40px;
+            top: 0px;
             left: 0;
             width: 100%;
             height: 80px;
@@ -191,7 +202,7 @@
             justify-content: space-between;
             align-items: center;
             flex: 1;
-            position: relative;
+            position:relative;
         }
 
         .nav-items {
@@ -202,6 +213,23 @@
 
         .nav-items>.menu {
             display: none;
+        }
+
+        .footer-container{
+            background-color: rgb(49, 49, 49);
+            margin: 0px;
+            position: absolute;
+            top: 94%;
+            left: 0;
+            width: 100%;
+            height: 80px;   
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .linkedin-padding{
+            padding-top: 15px;
         }
 
         @keyframes pop-in {
@@ -244,11 +272,7 @@
         /* Responsive layout */
         @media (max-width: 520px) {
 
-            html {
-                background-size: 227px;
-                background-position-y: 99px;
-                background-position-x: 49px;
-            }
+        
 
             .title {
                 font-size: 25px;
@@ -318,14 +342,9 @@
 <header>
     <div class="nav">
         <div class="nav-container container-max">
-
-
-
-
+            
             <a class="logo" href="#">
                 <img src="lj-lojo-white.svg" alt="logo">
-
-
             </a>
 
             <div class="nav-items">
@@ -343,12 +362,12 @@
 
 <body>
 
-    <div class="flex-container-center-page" style="height:100%">
+    <div class="flex-container-center-page" style="height:48%" > 
         <div class="row">
             <div class="flex-item">
 
                 <div class="logo">
-                    <img src="lj-lojo.svg" alt="logo" width="70vw" height="auto">
+                    <img src="lj-lojo.svg" alt="logo" width="60vw" height="auto">
 
                 </div>
 
@@ -358,10 +377,12 @@
 
                 <div class="titleDescription">
                     <p>Hi there! This is a website for my personal projects<strong>.</strong></p>
-
                 </div>
-
-
+                <!--
+                <iframe 
+                    title="vimeo-player" src="https://player.vimeo.com/video/726127600?h=5534e3fe26" width="640" height="360" frameborder="0" allowfullscreen>
+                </iframe>
+            -->
 
             </div>
 
@@ -372,17 +393,21 @@
 
     </div>
 
-
-</body>
-<footer>
     <footer class="footer-container">
-        <nav class="text-center">
-            <div class="linkedin">
-                <img src="linkedin.svg" alt="linkedin logo" width="125px" height="auto" style="padding-top:5px">
-            </div>
-        </nav>
+        
+        <div class="row">
+            <div class="linkedin-padding flex-item" >
+               <a href="https://www.linkedin.com/in/lajeshwar-limbu"> <img src="linkedin.svg" alt="linkedin logo" width="100px" height="auto" > </a>
 
+                <p style="font-size: 10px;color: aliceblue;font-family: Open Sans; font-weight:lighter; ">All background images are generated from Midjourney AI.</p>
+            </div>
+        </div>
 
     </footer>
+   
+    
+</body>
+
+ 
 
 </html>
