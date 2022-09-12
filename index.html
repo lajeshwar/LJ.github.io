@@ -17,21 +17,18 @@
             font-family: 'Open Sans'};
 
         * {
-            overflow: hidden;
+        
             box-sizing: border-box;
-        }
-        body {
-            height: 90vh;
         }
 
         html {
-            min-width: fit-content;
+            min-height: 100%;
+            
             background: rgb(153, 177, 150);
             background-image: url('bg-2.png');
             background-repeat: no-repeat;
             background-size:cover;
             background-position: center;
-            min-height: 100%;
         } 
 
         header {
@@ -74,13 +71,12 @@
 
 
         .flex-container-center-page {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0px;
-            margin: 0px;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
    
         .row {
@@ -204,13 +200,13 @@
         footer{
             display: -webkit-flex;
             display: -ms-flexbox;
-            
+            display: -o-fl;
             background-color: rgb(49, 49, 49);
             position: absolute;
             text-align: center;
             width: 100%;
             left:0;
-            bottom: 0;
+            bottom: 0vh;
             display: flex; 
             flex-direction: column;
             align-items: center;
@@ -348,7 +344,7 @@
         </div>
     </header>
 
-    <div class="flex-container-center-page" style="height:48%" > 
+    <div class="flex-container-center-page" style="height:75%" > 
         <div class="row">
             <div class="flex-item">
 
