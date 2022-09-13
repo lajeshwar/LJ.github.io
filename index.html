@@ -29,6 +29,9 @@
             background-repeat: no-repeat;
             background-size:cover;
             background-position: center;
+            -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
         } 
        
         header {
@@ -70,13 +73,14 @@
         }
 
 
-        .flex-container-center-page {
+       body>.flex-container-center-page {
             position: absolute;
             top:0;
             bottom: 0;
             left: 0;
             right: 0;
             margin: auto;
+            height:75%;
         }
    
         .row {
@@ -200,7 +204,6 @@
         footer{
             display: -webkit-flex;
             display: -ms-flexbox;
-            display: -o-fl;
             background-color: rgb(49, 49, 49);
             
             text-align: center;
@@ -252,9 +255,39 @@ right:0;
 
 
         /* Responsive layout */
+        @media (max-height: 860px) {
+            
+        html{
+            background-position: top;
+        }   
+
+        body>.flex-container-center-page{
+            height:65%;
+        }
+
+            .title >h1 {
+                font-size: 270%;
+                margin-top: 5px;
+            }
+            .titleDescription{
+                color: black;
+            }
+            .titleDescription>p {
+                font-size: 90%;
+            }
+
+            .logo>img {
+                width: 40px;
+                padding-top: 1%;
+            }
+
+
+        }
         @media (max-width: 520px) {
 
-        
+            html{
+            background-position: top;
+        }  
 
             .title >h1 {
                 font-size: 15px;
@@ -338,7 +371,7 @@ right:0;
         </div>
     </header>
 
-    <div class="flex-container-center-page" style="height:75%" > 
+    <div class="flex-container-center-page" > 
         <div class="row">
             <div class="flex-item">
 
