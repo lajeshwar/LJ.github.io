@@ -1,17 +1,9 @@
 
-@font-face {
-    font-family: 'Open Sans';
-    src: url('fonts/Open_Sans/OpenSans-LightItalic.eot');
-    src: url('fonts/Open_Sans/OpenSans-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Open_Sans/OpenSans-LightItalic.woff') format('woff'),
-        url('fonts/Open_Sans/OpenSans-LightItalic.ttf') format('truetype');
-        font-weight: normal;
-  }
 
 * {
-    font-family: 'Open Sans';
-    font-weight: 700;
+    font-family: sans-serif;
     font-size: 15px;
+    font-weight: 700;
     box-sizing: border-box;
 }
 
