@@ -8,26 +8,31 @@
     font-weight: 700;
     box-sizing: border-box;
 }
-
 #c1{
-    background:rgb(49, 49, 49);
+    
     position: absolute;
     top: 80px;
+    background-color: black
+    
+    ;
 }
 
+
+#warpButton {
+    font-family: 'Acme', sans-serif;
+
+}
 .controls{
     position: absolute;
     top: 80px;
     z-index: 100;
 }
 
-img>.image{
-    display: none;
-}
-html{
+
+html>main{
     min-height: 100vh;
     position:relative;
-    background: rgb(49, 49, 49);
+    background: rgb(153, 177, 150);
     background-image: url('bg-2.png');
     background-repeat: no-repeat;
     background-size:cover;
@@ -186,7 +191,7 @@ body>.flex-container-center-page {
     margin: 0;
     padding: 0;
     width: 150px;
-    z-index: 200;
+    z-index: 2;
 }
 
 .nav-items {
