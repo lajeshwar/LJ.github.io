@@ -2,7 +2,6 @@
 window.addEventListener('load',function(){
     const canvas = document.getElementById('c1');
     const ctx = canvas.getContext('2d');
-    console.log(ctx);
     canvas.width = this.innerWidth;
     canvas.height = this.innerHeight-80;
 
@@ -104,7 +103,6 @@ window.addEventListener('load',function(){
 
     const effect = new ParticleEffectMaster(canvas.width, canvas.height);
     effect.init(ctx);
-    console.log(effect)
  
     function animate(){
         ctx.clearRect(0,0,canvas.width, canvas.height);

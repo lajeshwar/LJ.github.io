@@ -14,7 +14,7 @@
     top: 80px;
     background-color: black
     
-    ;
+
 }
 
 
@@ -29,10 +29,10 @@
 }
 
 
-html>main{
+html{
     min-height: 100vh;
     position:relative;
-    background: rgb(153, 177, 150);
+    background: rgb(49, 49, 49);
     background-image: url('bg-2.png');
     background-repeat: no-repeat;
     background-size:cover;
