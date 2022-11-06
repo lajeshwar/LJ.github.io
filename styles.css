@@ -8,6 +8,7 @@
     font-weight: 700;
     box-sizing: border-box;
 }
+
 #c1{
     background:rgb(49, 49, 49);
     position: absolute;
@@ -20,13 +21,13 @@
     z-index: 100;
 }
 
-img{
+img>.image{
     display: none;
 }
 html{
     min-height: 100vh;
     position:relative;
-    background: rgb(153, 177, 150);
+    background: rgb(49, 49, 49);
     background-image: url('bg-2.png');
     background-repeat: no-repeat;
     background-size:cover;
@@ -185,7 +186,7 @@ body>.flex-container-center-page {
     margin: 0;
     padding: 0;
     width: 150px;
-    z-index: 2;
+    z-index: 200;
 }
 
 .nav-items {
