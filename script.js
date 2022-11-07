@@ -1,5 +1,6 @@
 
 window.addEventListener('load',function(){
+   
     const canvas = document.getElementById('c1');
     const ctx = canvas.getContext('2d');
     canvas.width = this.innerWidth;
@@ -7,7 +8,9 @@ window.addEventListener('load',function(){
 
    
     class Particle{
+       
         constructor(ParticleEffectMaster,x,y,color){
+           
             this.effect = ParticleEffectMaster;
             this.x = Math.random() * this.effect.width;
             this.y =  Math.random() * this.effect.height;
@@ -35,20 +38,20 @@ window.addEventListener('load',function(){
             this.distance = this.dx * this.dx+this.dy*this.dy;
             this.force = -this.effect.mouse.radius / this.distance;
 
-            if(this.distance < this.effect.mouse.radius){
+            if(this.distance < this.effect.mouse.radius) {
                 this.angle = Math.atan2(this.dy, this.dx); 
-                this.vx += this.force * Math.cos(this.angle);
-                this.vy += this.force * Math.sin(this.angle);
+                this.vx += this.force * Math.sin(-this.angle);
+                this.vy += this.force * Math.cos(this.angle);
             }
-            this.x += (this.vx *= this.friction)+(this.originX - this.x) *this.ease;
+            this.x += (this.vx *= this.friction)+(this.originX - this.x)*this.ease;
             this.y += (this.vy *= this.friction)+(this.originY - this.y)*this.ease;
 
         }
         warp(){
-            this.x = Math.random() * this.effect.width;
+            this.x =  Math.random() * this.effect.width;
             this.y =  Math.random() * this.effect.height;
             this.ease = 0.05;
-
+           
         }
     }
 
@@ -97,6 +100,7 @@ window.addEventListener('load',function(){
 
         }
         warp(){
+            console.log('Warp!');
             this.particles.forEach(particle =>particle.warp());
         }
     }
@@ -110,12 +114,14 @@ window.addEventListener('load',function(){
         effect.update();
         requestAnimationFrame(animate);
     }
+
+    const warpButton = document.getElementById('warpButton').addEventListener('click',function(){
+        effect.warp();
+    });
      animate();
 
-     const warpButton = this.document.getElementById('warpButton'
-     );
-     warpButton.addEventListener('click',function(){
-        effect.warp();
-     });
+ 
+     
+     
 });
 

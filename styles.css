@@ -12,7 +12,6 @@
     
     position: absolute;
     top: 80px;
-    background-color:rgb(49, 49, 49);
     
 
 }
@@ -20,7 +19,6 @@
 
 #warpButton {
     font-family: 'Acme', sans-serif;
-
 }
 .controls{
     position: absolute;
