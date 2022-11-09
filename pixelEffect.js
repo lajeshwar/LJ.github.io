@@ -4,7 +4,7 @@ window.addEventListener('load',function(){
     const canvas = document.getElementById('c1');
     const ctx = canvas.getContext('2d');
     canvas.width = this.innerWidth;
-    canvas.height = this.innerHeight-80;
+    canvas.height = this.innerHeight-280;
 
    
     class Particle{
@@ -68,7 +68,7 @@ window.addEventListener('load',function(){
             this.mouse= {radius:5000,x:undefined,y:undefined}
             window.addEventListener('mousemove',event=>{
                 this.mouse.x = event.x;
-                this.mouse.y = event.y-80;
+                this.mouse.y = event.y-280;
             });
         }
         init(context){

@@ -8,10 +8,13 @@
     font-weight: 700;
     box-sizing: border-box;
 }
+#image{
+    top: 100px;
+}
 #c1{
     
     position: absolute;
-    top: 80px;
+    top: 280px;
     
 
 }
@@ -21,8 +24,8 @@
     font-family: 'Acme', sans-serif;
 }
 .controls{
-    position: absolute;
-    top: 80px;
+    position:relative;
+    display:block;
     z-index: 100;
 }
 
