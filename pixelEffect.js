@@ -3,9 +3,14 @@ window.addEventListener('load',function(){
    
     const canvas = document.getElementById('c1');
     const ctx = canvas.getContext('2d');
+    var topOffset = canvas.width*0.75;
+    
+    canvas.style.top = topOffset +"px";
     canvas.width = this.innerWidth;
-    canvas.height = this.innerHeight-280;
-
+    canvas.height = this.innerHeight-topOffset;
+    
+    
+ 
    
     class Particle{
        
@@ -64,11 +69,16 @@ window.addEventListener('load',function(){
             this.centerX = this.width *0.5;
             this.centerY = this.height*0.5;
             this.x = this.centerX - this.image.width *0.5;
-            this.gap = 4;
+            this.y = this.centerY - this.image.height *0.5;
+            if(window.innerWidth < 900)  {
+                this.gap = 10;
+            }else{
+                this.gap = 5;
+            }
             this.mouse= {radius:5000,x:undefined,y:undefined}
             window.addEventListener('mousemove',event=>{
                 this.mouse.x = event.x;
-                this.mouse.y = event.y-280;
+                this.mouse.y = event.y-topOffset;
             });
         }
         init(context){
@@ -100,7 +110,7 @@ window.addEventListener('load',function(){
 
         }
         warp(){
-            console.log('Warp!');
+            
             this.particles.forEach(particle =>particle.warp());
         }
     }
