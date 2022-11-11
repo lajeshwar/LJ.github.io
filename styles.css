@@ -17,9 +17,19 @@
     
 
 }
-
+#loadNewImageButton{
+    animation: none;
+    transform: none;
+}
+#loadNewImageButton>a {
+    text-decoration: none;
+    font-family: 'Acme', sans-serif;
+    animation: none;
+    transform: none;
+}
 
 #warpButton {
+    
     font-family: 'Acme', sans-serif;
 }
 .controls{
