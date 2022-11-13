@@ -60,17 +60,21 @@
     
     <script type="module">
         const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); //fov, ratio, near, far views of the camera to render_
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer(); // WEBGL render
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( {  color: 0x03ffff} );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+document.body.appendChild( renderer.domElement ); 
 
-camera.position.z = 5;
+const geometry = new THREE.BoxGeometry( 3, 2, 3 );
+const material = new THREE.MeshStandardMaterial();
+
+const cube = new THREE.Mesh( geometry, material );
+
+scene.add( cube );
+const hemilight  = new THREE.HemisphereLight(2);
+scene.add(hemilight);
+camera.position.z = 6;
 
 function animate() {
     cube.rotation.x += 0.01;
