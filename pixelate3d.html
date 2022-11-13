@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html class="pixelate3d" lang="en">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pixelate3d</title> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme" rel="stylesheet">
+        <link  rel = "stylesheet"  type = "text/css" href = "styles.css">
+       <style>
+     
+        html{
+            background: rgb(49, 49, 49);
+            background-image: none;
+        }
+  
+       </style>
+
+       
+    </head>
+ 
+    <header>
+        <div class="nav">
+            <div class="nav-container container-max">
+                
+                <a class="logo" href="index.html">
+                    <img src="lj-lojo-white.svg" alt="logo">
+                </a>
+    
+                <div class="nav-items">
+                    <div class="home"><a href="index.html">HOME </a></div>
+                    <div class="portfolio"><a href="portfolio.html">PORTFOLIO </a></div>
+                    <div class="pixelate"><a href="pixelate.html">PIXELATE 2D PROJECT </a></div>
+                    <div class="pixelate3d"><a href="pixelate3d.html">PIXELATE 3D PROJECT </a></div>
+                    <div class="contact"><a href="#">CONTACT</a></div>
+                    <div class="menu"><img src="menu-white.svg" style="width: 30px"></div>
+                </div>
+    
+    
+    
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+<body>
+
+    <script src = "three.js"> 
+    
+    
+    </script>
+    
+    <script type="module">
+        const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshBasicMaterial( {  color: 0x03ffff} );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
+
+camera.position.z = 5;
+
+function animate() {
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+	requestAnimationFrame( animate );
+	renderer.render( scene, camera );
+
+}
+animate();
+    </script>
+
+   
+</body>
+
+
+
+
+
+</html>
