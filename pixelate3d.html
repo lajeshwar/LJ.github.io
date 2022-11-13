@@ -70,7 +70,7 @@ const geometry = new THREE.BoxGeometry( 3, 2, 3 );
 const material = new THREE.MeshStandardMaterial();
 
 const cube = new THREE.Mesh( geometry, material );
-
+cube.material.color.set(new THREE.Color( 0x0000ff ));
 scene.add( cube );
 const hemilight  = new THREE.HemisphereLight(2);
 scene.add(hemilight);
