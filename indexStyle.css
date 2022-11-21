@@ -31,11 +31,14 @@ div{
     margin-left: 400px;
     margin-right: 400px;
     align-items: center;
+    flex: 1;
+    position:relative;
     background: rgba(0, 0, 0,0.0);
 }
 
 .site-nav-logo *{
     width:160px;
+    position: relative;
 }
 
 .site-nav-link *{
