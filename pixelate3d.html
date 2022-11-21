@@ -71,25 +71,54 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 camera.position.x = 0;
 camera.position.y = 0;
 camera.position.z = 20;
-let shape;
+
 class Particle{
 
     constructor(scenee){
         
-        const texture = new THREE.TextureLoader().load("wood.jpg");
-        const geometry = new THREE.BoxGeometry( 10, 10, 10 );
-        const material = new THREE.MeshBasicMaterial( { map:texture} );
+  
 
-         shape  = new THREE.Mesh( geometry, material );
-        
-
-        scenee.add(shape);
-
- 
+      
     }
-    
+    draw(shape){
+               // Rotate the x position of the mesh by 0.03
+            this.shape.rotation.y += 0.01;
+	            // Rotate the y position of the mesh by 0.02
+            this.shape.rotation.z += 0.01;
+        }
 
 }
+class ParticleMaster{
+    constructor(){
+        const texture = new THREE.TextureLoader().load("wood.jpg");
+        const material = new THREE.MeshBasicMaterial( { map:texture} );
+        const geometry = new THREE.BoxGeometry( 2, 2, 2 );
+
+       
+        for(let i = 0; i < 100; i++){
+            var shape = new THREE.Mesh( geometry, material );
+            shape.name = i;
+            shape.position.z = Math.random(camera.position)+2;
+            shape.position.x = Math.random(-camera.position/10)*10;
+            shape.position.y = Math.random(-camera.position/10)*7;
+            shape.rotation.x = Math.random(-360)*360;
+           
+
+
+            scene.add(shape);
+            
+        }
+      
+    }
+    
+    update(shape){
+        shape.rotation.z +=1;
+    }
+   
+
+}
+
+
 
 class lightingSystem{
     constructor(){
@@ -97,18 +126,23 @@ class lightingSystem{
         scene.add(hemilight);
     }
 }
-const particle = new Particle(scene);
+
+const effect = new ParticleMaster();
 const light = new lightingSystem();
 
 function animate() {
-
+    
     
 	requestAnimationFrame( animate );
 
-    // Rotate the x position of the mesh by 0.03
-    shape.rotation.y += 0.01;
-	// Rotate the y position of the mesh by 0.02
-	shape.rotation.z += 0.01;
+    for(let i = 0; i < 100; i++){
+            scene.getObjectByName(i).rotation.x +=0.01;
+            scene.getObjectByName(i).rotation.y +=0.01;
+    
+        }
+       
+       
+          
 	renderer.render( scene, camera );    
 }
 animate();

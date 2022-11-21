@@ -1,0 +1,57 @@
+
+html{
+    -webkit-font-smoothing: antialiased;
+    font-family:sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgb(25, 25, 25);
+    background-image: url("leather-green-texture.jpg") ;
+    background-size:cover;
+    background-blend-mode:overlay;
+}   
+
+div{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 100%;
+}
+
+
+.site-nav-container{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-left: 400px;
+    margin-right: 400px;
+    align-items: center;
+    background: rgba(0, 0, 0,0.0);
+}
+
+.site-nav-logo *{
+    width:160px;
+}
+
+.site-nav-link *{
+
+    font-size: 16px;
+    font-weight: 600;
+    transition:all 0.3s ease-in-out;
+    padding: 30px 0 30px 15px;
+    list-style-type:none;
+    text-decoration: none;
+    margin-left: 30px;
+    color: white;
+    
+}
+
+.site-nav-link *:hover{
+    color: red;
+    transition:all 0.3s ease-in-out;
+}
