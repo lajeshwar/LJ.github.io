@@ -4,15 +4,12 @@ html{
     font-family:sans-serif;
 }
 
-
 body {
     margin: 0;
     padding: 0;
     border: 0;
-    background: rgb(25, 25, 25);
-    background-image: url("leather-green-texture.jpg") ;
+    background: rgb(29, 29, 29);
     background-size:cover;
-    background-blend-mode:overlay;
 }   
 
 div{
@@ -28,8 +25,7 @@ div{
     display: flex;
     justify-content: space-between;
     height: 150px;
-    margin-left: 400px;
-    margin-right: 400px;
+    justify-content: space-around;
     align-items: center;
     flex: 1;
     position:relative;
@@ -37,7 +33,7 @@ div{
 }
 
 .site-nav-logo *{
-    width:160px;
+    width:115px;
     position: relative;
 }
 
@@ -47,12 +43,11 @@ div{
     font-size: 16px;
     font-weight: 600;
     transition:all 0.3s ease-in-out;
-    padding: 30px 0 30px 15px;
+    padding: 10px 0 10px 10px;
     list-style-type:none;
     text-decoration: none;
     margin-left: 30px;
     color: white;
-    
 }
 
 .site-nav-link *:hover{
