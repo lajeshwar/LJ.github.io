@@ -56,19 +56,18 @@ div{
 
 
 .left-panel *{
-    color: aliceblue;
     display: flex;
     top:50%;
-   
     text-align: center;
-
+    color: white;
 }
 .right-panel *{
-    color: aliceblue;
+   
     display: flex;
     top:50%;
     left:95%;
     text-align: center;
+    color: white;
 
 }
 
