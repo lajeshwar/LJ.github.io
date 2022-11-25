@@ -78,8 +78,7 @@ div{
     position: relative;
     background: brown;
     align-items: center;
-    left: 348px;
-    width: 1223px;
+    width: 100%;
 }
 
 .intro{
