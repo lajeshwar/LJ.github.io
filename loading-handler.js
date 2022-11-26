@@ -8,7 +8,7 @@ await new Promise(resolve =>{
             const right = document.getElementById("right").style.display = "flex";
 
             const left = document.getElementById("left").style.display = "flex";
-        },300)
+        },1000)
         resolve();
          }); 
        
