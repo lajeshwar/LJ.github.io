@@ -15,5 +15,9 @@ const getTime = () => {
     document.getElementById("time").innerHTML = formattedDate;
 
 }
-getDate();
-setInterval(getTime,1000);
+window.onload = () =>{
+    getDate();
+    getTime();
+    setInterval(getTime,1000);
+}
+
