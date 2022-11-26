@@ -4,6 +4,67 @@ html{
     text-rendering: geometricPrecision;
 }
 
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+
+
+    .site-nav-link{
+        display: none;
+    }
+
+   #le{
+   
+    display: block !important;
+   }
+    .grid-container{
+        grid-template-columns: 0.2fr 3fr 0.2fr !important;
+    }
+
+    .middle-panel{
+     
+        background: rgba(0, 0, 0,0.412);
+        grid-column: 1/4 !important;
+
+        animation: mob-animate-border 1s !important;
+        animation-fill-mode: forwards; 
+    }
+   
+    .grid-container{
+        display: none;
+    }
+    #date{
+        display: none;
+    }
+    #time{
+        display: none;
+    }
+
+    
+@keyframes mob-animate-border {
+    0%   {border-radius: 0px; background: rgba(0, 0, 0,0.0);transform: scaleX(1.2);}
+    100% {border-radius: 0px!important;background: rgba(0, 0, 0,0.412)};
+}
+}
+
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /*Insert your tablet CSS in here!*/
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    /*Insert your mobile CSS in here!*/
+}
+
+#le{
+    width: 50px;
+    display: none;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -22,11 +83,12 @@ div *{
 
 .grid-container{
     display: grid;
-    grid-template-rows: 0.5fr 4fr 4fr;
+    grid-template-rows: 0.5fr 5fr 4fr;
     grid-template-columns: 1fr 3fr 1fr;
 }
 
 .site-nav-container{
+    grid-row: 1;
     grid-column: 2;
     display: flex;
     height: 150px;
@@ -102,10 +164,11 @@ red{
     animation: appear-red 2s ;
     animation-fill-mode: forwards;  
 }
+
 @keyframes animate-border {
     0%   {border-radius: 0px; background: rgba(0, 0, 0,0.0);transform: scaleX(1.2);}
     100% {border-radius: 30px;background: rgba(0, 0, 0,0.412)};
-    }
+}
 
 @keyframes appear {
     0%   {color: rgba(0, 0, 0,0.0);}
@@ -148,3 +211,4 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+
