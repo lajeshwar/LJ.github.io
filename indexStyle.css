@@ -165,12 +165,6 @@ div *{
 
 }
 
-red-period{
-    color: red;
-    font-size: 60px;
-    animation: appear-red 2s ;
-    animation-fill-mode: forwards;  
-}
 
 red{
     color: red;
