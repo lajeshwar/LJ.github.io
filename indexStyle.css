@@ -124,7 +124,7 @@ div *{
 
 .site-nav-link *:hover{
     transition:all 0.3s ease-in-out;
-    color: red;
+    color: rgb(165,97,41);
 }
 
 
