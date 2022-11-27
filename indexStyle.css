@@ -48,7 +48,7 @@ html{
     
 @keyframes mob-animate-border {
     0%   {border-radius: 0px; background: rgba(0, 0, 0,0.0);transform: scaleX(1.2);}
-    100% {border-radius: 0px!important;background: rgba(0, 0, 0,0.412);background:url("bird.svg")rgba(0, 0, 0,0.412);    background-repeat:initial;background-position: right ; background-blend-mode: color-burn};
+    100% {border-radius: 0px!important;background: rgba(0, 0, 0,0.412);}
 }
 }
 
@@ -74,7 +74,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background: rgb(29, 29, 29);
+    background:url("desu.svg")rgba(29, 29, 29);  background-size:contain;
     background-size:cover;
 }   
 
@@ -180,7 +180,7 @@ red{
 
 @keyframes animate-border {
     0%   {border-radius: 0px; background: rgba(0, 0, 0,0.0);transform: scaleX(1.2);}
-    100% {border-radius: 30px;background: rgba(0, 0, 0,0.412);background:url("bird.svg")rgba(0, 0, 0,0.412);    background-repeat:initial;background-position: right ; background-blend-mode: color-dodge };
+    100% {border-radius: 30px;background: rgba(0, 0, 0,0.412);};
 }
 
 @keyframes appear-white {
