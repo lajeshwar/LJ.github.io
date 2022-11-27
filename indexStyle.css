@@ -19,7 +19,6 @@ html{
    }
     .grid-container{
         justify-content: center;
-        grid-template-rows: 1fr 6fr 1fr!important;
         grid-template-columns: 0.2fr 3fr 0.2fr !important;
     }
 
