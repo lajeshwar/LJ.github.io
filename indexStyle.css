@@ -136,15 +136,22 @@ div *{
     align-items: center;
     justify-content:stretch;
 }
-
+.mid-grid-container{
+    display: grid;
+    grid-template-rows: 3fr 5fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    width: 100%;
+    height: 100%;
+}
 .middle-panel{
     grid-row: 2;
     grid-column: 2;
     display: flex;
+    justify-content:center;
     align-items: center;
     animation: animate-border 1s;
     animation-fill-mode: forwards;  
-
+    flex-direction: column;
 }
 
 .right-panel{
@@ -157,19 +164,63 @@ div *{
 
 
 .intro{
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
     font-size: 50px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
     animation: appear-white 2s;
     animation-fill-mode: forwards;  
 
 }
+.scroll-container{
+    grid-row: 3;
+    grid-column:2;
+    display: flex;
 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.scroll-down{
+    width: 70px;
+
+ 
+}
+
+svg path{
+   animation:blinker-animation 2.5s 5s infinite;
+}
 
 red{
     color: red;
-    animation: appear-red 2s ;
-    animation-fill-mode: forwards;  
+    animation: appear-red 2s;
+}
+
+
+
+/*Custom Animations*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@keyframes blinker-animation {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes animate-border {
+    0%   {border-radius: 0px; background: rgba(0, 0, 0,0.0);transform: scaleX(1.2);}
+    100% {border-radius: 30px;background: rgba(0, 0, 0,0.412);};
 }
 
 @keyframes animate-border {
@@ -187,6 +238,7 @@ red{
     100% {color: rgb(255, 0, 1);}
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 #date{
     font-size: 20px;
