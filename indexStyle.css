@@ -147,6 +147,7 @@ div *{
     grid-row: 2;
     grid-column: 2;
     display: flex;
+    
     justify-content:center;
     align-items: center;
     animation: animate-border 1s;
@@ -186,14 +187,13 @@ div *{
     text-align: center;
    
 }
-.scroll-down{
+.arrow-down{
     width: 70px;
-
- 
+    animation:blinker-animation 2.5s 5s infinite;
 }
 
 svg path{
-   animation:blinker-animation 2.5s 5s infinite;
+   
 }
 
 red{
