@@ -1,0 +1,51 @@
+
+#textinput {
+    min-width: 500px;
+    max-width: 500px;
+
+    min-height: 300px;
+    max-height: 300px;
+}
+
+#textoutput {
+    min-width: 500px;
+    max-width: 500px;
+    
+    min-height: 300px;
+    max-height: 300px;
+}
+
+#link1 {
+    min-width: 500px;
+    max-width: 500px;
+
+    min-height: 100px;
+    max-height: 100px;
+}
+
+
+#link2 {
+    min-width: 500px;
+    max-width: 500px;
+
+    min-height: 100px;
+    max-height: 100px;
+}
+
+
+.quicklink{
+
+    padding: 10px;
+}
+
+.row{
+    align-items: center;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    min-height: 10px;
+    bottom: 0;
+    left: 0;
+}
