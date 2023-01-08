@@ -58,7 +58,7 @@
 </head>
 
 <body>
-
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Container wrapper -->
         <div class="container-fluid">
@@ -70,144 +70,194 @@
             </div>
             <!-- Container wrapper -->
     </nav>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <main class="col-12">
+                <!-- Main content goes here -->
 
 
-
-    <div class="container-xxl text-center" style="padding-top:70px">
-
-
-        <div class="row ">
-
-            <div class="col-sm">
-
-                <h3>Current mode: <select id="bootstrap-select" onchange="processText()">
-                        <option id="1" value="1" selected="selected">Encode</option>
-                        <option id="2" value="2">Decode</option>
-                    </select>
-                </h3>
-
-            </div>
-
-        </div>
-
-        <div class="row" style="padding-top: 50px;">
+                <div class="container content text-center" style="padding-top:70px">
 
 
-            <div class="col-md">
+                    <div class="row ">
 
-                <div class="col ">
-                    <textarea id="textinput" placeholder="Input here..." onchange="processText()"
-                        onkeydown="processText()"></textarea>
-                </div>
+                        <div class="col-sm">
 
-                <div class="col text-center">
-                    <label><a class="quicklink" href="#">upload</a><a class="quicklink" href="#">clear</a></label>
+                            <h3>Current mode: <select id="bootstrap-select" onchange="processText()">
+                                    <option id="1" value="1" selected="selected">Encode</option>
+                                    <option id="2" value="2">Decode</option>
+                                </select>
+                            </h3>
 
-                </div>
+                        </div>
 
-
-            </div>
-            <div class="col-md ">
-
-                <div class="col">
-                    <textarea id="textoutput" disabled="true"></textarea>
-                </div>
-
-                <div class="col text-center">
-                    <label><a class="quicklink" href="#">download</a><a class="quicklink" href="#">copy</a></label>
-                </div>
-            </div>
-
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col">
-                        <p>Base64 is a method of encoding binary data, such as images or audio files, into ASCII
-                            characters so that they can be sent over a network or stored in a text file. It is often
-                            used to transmit data over the internet because ASCII characters are a universal standard
-                            and can be easily transmitted between systems. When encoding data using base64, the data is
-                            first divided into blocks of 24 bits, which are then converted into four ASCII characters
-                            using a lookup table.</p>
-                        <p>Here is a table that illustrates the process of base64 encoding:</p>
-                        <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-                            <tr>
-                                <th>Binary Data</th>
-                                <th>ASCII Characters</th>
-                            </tr>
-                            <tr>
-                                <td>01010101</td>
-                                <td>U</td>
-                            </tr>
-                            <tr>
-                                <td>00101010</td>
-                                <td>I</td>
-                            </tr>
-                            <tr>
-                                <td>01010100</td>
-                                <td>T</td>
-                            </tr>
-                            <tr>
-                                <td>00101001</td>
-                                <td>H</td>
-                            </tr>
-                        </table>
-                        <br>
-
-                        <p>To decode base64 data, the process is simply reversed. The ASCII characters are converted
-                            back into their original binary form using the same lookup table.</p>
-                        <p>Here is a table that illustrates the process of base64 decoding:</p>
-                        <table style="border:1px solid black;margin-left:auto;margin-right:auto;border-spacing: 20px;">
-                            <tr>
-                                <th>ASCII Characters</th>
-                                <th>Binary Data</th>
-                            </tr>
-                            <tr>
-                                <td>U</td>
-                                <td>01010101</td>
-                            </tr>
-                            <tr>
-                                <td>I</td>
-                                <td>00101010</td>
-                            </tr>
-                            <tr>
-                                <td>T</td>
-                                <td>01010100</td>
-                            </tr>
-                            <tr>
-                                <td>H</td>
-                                <td>00101001</td>
-                            </tr>
-                        </table>
-                        <br>
-                        
-                        <p>Base64 encoding and decoding is often used in conjunction with other data formats, such as
-                            XML and JSON, to transmit data securely over networks.</p>
                     </div>
+
+                    <div class="row" style="padding-top: 50px;">
+
+
+                        <div class="col-md">
+
+                            <div class="col ">
+                                <textarea id="textinput" placeholder="Input here..." onchange="processText()"
+                                    onkeydown="processText()"></textarea>
+                            </div>
+
+                            <div class="col text-center">
+                                <label><a class="quicklink" href="#">upload</a><a class="quicklink"
+                                        href="#">clear</a></label>
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-md ">
+
+                            <div class="col">
+                                <textarea id="textoutput" disabled="true"></textarea>
+                            </div>
+
+                            <div class="col text-center">
+                                <label><a class="quicklink" href="#">download</a><a class="quicklink"
+                                        href="#">copy</a></label>
+                            </div>
+                        </div>
+
+
+                        <div class="container">
+
+                            <div class="row">
+
+                                <div class="col">
+                                    <p>Base64 is a method of encoding binary data, such as images or audio files, into
+                                        ASCII
+                                        characters so that they can be sent over a network or stored in a text file. It
+                                        is often
+                                        used to transmit data over the internet because ASCII characters are a universal
+                                        standard
+                                        and can be easily transmitted between systems. When encoding data using base64,
+                                        the data is
+                                        first divided into blocks of 24 bits, which are then converted into four ASCII
+                                        characters
+                                        using a lookup table.</p>
+                                    <p>Here is a table that illustrates the process of base64 encoding:</p>
+                                    <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+                                        <tr>
+                                            <th>Binary Data</th>
+                                            <th>ASCII Characters</th>
+                                        </tr>
+                                        <tr>
+                                            <td>01010101</td>
+                                            <td>U</td>
+                                        </tr>
+                                        <tr>
+                                            <td>00101010</td>
+                                            <td>I</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01010100</td>
+                                            <td>T</td>
+                                        </tr>
+                                        <tr>
+                                            <td>00101001</td>
+                                            <td>H</td>
+                                        </tr>
+                                    </table>
+                                    <br>
+
+                                    <p>To decode base64 data, the process is simply reversed. The ASCII characters are
+                                        converted
+                                        back into their original binary form using the same lookup table.</p>
+                                    <p>Here is a table that illustrates the process of base64 decoding:</p>
+                                    <table
+                                        style="border:1px solid black;margin-left:auto;margin-right:auto;border-spacing: 20px;">
+                                        <tr>
+                                            <th>ASCII Characters</th>
+                                            <th>Binary Data</th>
+                                        </tr>
+                                        <tr>
+                                            <td>U</td>
+                                            <td>01010101</td>
+                                        </tr>
+                                        <tr>
+                                            <td>I</td>
+                                            <td>00101010</td>
+                                        </tr>
+                                        <tr>
+                                            <td>T</td>
+                                            <td>01010100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>H</td>
+                                            <td>00101001</td>
+                                        </tr>
+                                    </table>
+                                    <br>
+
+                                    <p>Base64 encoding and decoding is often used in conjunction with other data
+                                        formats, such as
+                                        XML and JSON, to transmit data securely over networks.</p>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
                 </div>
+            </main>
+            <footer class="col-12  bd-footer py-5 mt-5 bg-dark">
+                <!-- Footer content goes here -->
+                    <div class="container text-center ">
+                        ©<span id="year"></span> Base64EncodeDecode.tk
+                    </div>
 
-               
-
-
-            </div>
-
-
-            
+            </footer>
         </div>
 
-
-
+        
     </div>
 
 
+    <!--    <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h5>About</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor elit quis dui laoreet, at semper nisi fermentum.</p>
+            </div>
+            <div class="col-md-3">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Contact</h5>
+              <p>Email: info@example.com</p>
+            </div>
+            <div class="col-md-3">
+              <h5>Social</h5>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+-->
 
-    <footer class=" bd-footer py-5 mt-5 bg-dark text-center">
-
-        <div class="container py-5">
-        ©<span id="year"></span> Base64EncodeDecode.tk
-    </div>
-    </footer>
 
 
 </body>
