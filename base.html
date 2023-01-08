@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="baseStyle.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -73,11 +73,11 @@
 
 
 
-    <div class="container text-center" style="padding-top:70px">
+    <div class="container-xxl text-center" style="padding-top:70px">
 
 
         <div class="row ">
-           
+
             <div class="col-sm">
 
                 <h3>Current mode: <select id="bootstrap-select" onchange="processText()">
@@ -92,7 +92,7 @@
 
         <div class="row" style="padding-top: 50px;">
 
-    
+
             <div class="col-md">
 
                 <div class="col ">
@@ -119,6 +119,81 @@
             </div>
 
 
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col">
+                        <p>Base64 is a method of encoding binary data, such as images or audio files, into ASCII
+                            characters so that they can be sent over a network or stored in a text file. It is often
+                            used to transmit data over the internet because ASCII characters are a universal standard
+                            and can be easily transmitted between systems. When encoding data using base64, the data is
+                            first divided into blocks of 24 bits, which are then converted into four ASCII characters
+                            using a lookup table.</p>
+                        <p>Here is a table that illustrates the process of base64 encoding:</p>
+                        <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+                            <tr>
+                                <th>Binary Data</th>
+                                <th>ASCII Characters</th>
+                            </tr>
+                            <tr>
+                                <td>01010101</td>
+                                <td>U</td>
+                            </tr>
+                            <tr>
+                                <td>00101010</td>
+                                <td>I</td>
+                            </tr>
+                            <tr>
+                                <td>01010100</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>00101001</td>
+                                <td>H</td>
+                            </tr>
+                        </table>
+                        <br>
+
+                        <p>To decode base64 data, the process is simply reversed. The ASCII characters are converted
+                            back into their original binary form using the same lookup table.</p>
+                        <p>Here is a table that illustrates the process of base64 decoding:</p>
+                        <table style="border:1px solid black;margin-left:auto;margin-right:auto;border-spacing: 20px;">
+                            <tr>
+                                <th>ASCII Characters</th>
+                                <th>Binary Data</th>
+                            </tr>
+                            <tr>
+                                <td>U</td>
+                                <td>01010101</td>
+                            </tr>
+                            <tr>
+                                <td>I</td>
+                                <td>00101010</td>
+                            </tr>
+                            <tr>
+                                <td>T</td>
+                                <td>01010100</td>
+                            </tr>
+                            <tr>
+                                <td>H</td>
+                                <td>00101001</td>
+                            </tr>
+                        </table>
+                        <br>
+                        
+                        <p>Base64 encoding and decoding is often used in conjunction with other data formats, such as
+                            XML and JSON, to transmit data securely over networks.</p>
+                    </div>
+                </div>
+
+               
+
+
+            </div>
+
+
+            
         </div>
 
 
@@ -127,51 +202,55 @@
 
 
 
+    <footer class=" bd-footer py-5 mt-5 bg-dark text-center">
 
-    <footer class="container-fluid  text-center">
+        <div class="container py-5">
         ©<span id="year"></span> Base64EncodeDecode.tk
+    </div>
     </footer>
 
-    <script>
-        //by default it should be encode
-        //onclick change the lable of the button to Decode or make it a drop down
-        window.onload = () => {
-            document.getElementById("year").innerHTML = new Date().getFullYear();
-        }
 
-        function processText() {
-            let selector = document.getElementById("bootstrap-select");
-            let value = selector.value;
-            let textinput = document.getElementById('textinput');
-            let textoutput = document.getElementById('textoutput');
-            let input = textinput.value;
-
-            if (value == 1) {
-                textoutput.value = encode(input);
-            } else if (value == 2) {
-                textoutput.value = decode(input);
-            } else {
-                alert("Error: Invalid selection was made. Try again");
-            }
-
-            textinput = "";
-            textoutput = "";
-            selector = "";
-            input = "";
-
-
-        }
-
-        function encode(input) {
-            //Binary to ASCII
-            return btoa(input);
-        }
-
-        function decode(input) {
-            //ASCII to Binary
-            return atob(input);
-        }
-    </script>
 </body>
+
+<script>
+    //by default it should be encode
+    //onclick change the lable of the button to Decode or make it a drop down
+    window.onload = () => {
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    }
+
+    function processText() {
+        let selector = document.getElementById("bootstrap-select");
+        let value = selector.value;
+        let textinput = document.getElementById('textinput');
+        let textoutput = document.getElementById('textoutput');
+        let input = textinput.value;
+
+        if (value == 1) {
+            textoutput.value = encode(input);
+        } else if (value == 2) {
+            textoutput.value = decode(input);
+        } else {
+            alert("Error: Invalid selection was made. Try again");
+        }
+
+        textinput = "";
+        textoutput = "";
+        selector = "";
+        input = "";
+
+
+    }
+
+    function encode(input) {
+        //Binary to ASCII
+        return btoa(input);
+    }
+
+    function decode(input) {
+        //ASCII to Binary
+        return atob(input);
+    }
+</script>
 
 </html>
