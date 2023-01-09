@@ -3,15 +3,6 @@
     padding: 0;
 }
 
-#footer {
-    bottom: 0;
-    color: #707070;
-    height: 2em;
-    left: 0;
-    position: relative; 
-    font-size: small;
-    width:100%;
-}
 body{
     margin: 0;
     font-family: var(--bs-font-sans-serif);
@@ -22,6 +13,25 @@ body{
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.spacer {
+    flex: 1;
+}
+
+/* make it visible for the purposes of demo */
+.footer {
+    height: 50px;
+    background-color: red;
+    display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 th{
     padding: 10px !important;
@@ -61,7 +71,9 @@ th{
     min-height: 100px;
     max-height: 100px;
 }
-
+.offcanvas-bottom{
+    height: 0;
+}
 
 .quicklink{
 
@@ -71,14 +83,4 @@ th{
 .row{
     align-items: center;
 }
-.h-100 {
  
-        height: 100vh;
-      
-  }
-  
-  main {
-    overflow-y: auto;
-  }
-  
-  
