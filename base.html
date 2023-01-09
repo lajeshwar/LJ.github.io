@@ -50,46 +50,84 @@
                 padding: 15px;
             }
 
-            .row.content {
+            #textinput {
+                padding: 10px;
+                min-width: 300px;
+                max-width: 300px;
+
+                min-height: 100px;
+                max-height: 100px;
+            }
+
+            #textoutput {
+                padding: 10px;
+                min-width: 300px;
+                max-width: 300px;
+
+                min-height: 100px;
+                max-height: 100px;
+            }      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+            #link1 {
+                min-width: 300px;                 
+                max-width: 300px;
+                             
+                min-height: 100px;                                                                                                                                                                                                                                    
+                max-height: 100px;
+            }
+
+
+            #link2 {
+                min-width: 300px;                                                         
+                max-width: 300px;
+
+                min-height: 100px;                    
+                max-height: 100px;                    
+            }
+
+
+
+            .row.content {             
                 height: auto;
             }
         }
     </style>
-</head>
+</head>            
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg  "style="background: #dfdec5;">            
         <!-- Container wrapper -->
         <div class="container-fluid">
 
             <!-- Left links -->
-            <div class="col-sm-8 text-center">
-                <h1>Base64 Encoder | Decoder</h1>
+            <div class="col-sm-8 text-center ">
+                <h1 style="
+                margin-top: 10px;">Base64 Encoder | Decoder</h1>
                 <!-- Left links -->
             </div>
-            <!-- Container wrapper -->
+            <!-- Container wrapper -->            
     </nav>
 
-    <div class="container content text-center" style="padding-top:70px">
+    <div class="container content text-center " style="padding-top:70px;">             
 
 
         <div class="row ">
 
             <div class="col-sm">
-
-                <h3>Current mode: <select id="bootstrap-select" onchange="processText()">
-                        <option id="1" value="1" selected="selected">Encode</option>
+               
+                <h3>Current mode: <select id="bootstrap-select" onchange="processText()">                                                       
+                        <option id="1" value="1" selected="selected">Encode</option>              
                         <option id="2" value="2">Decode</option>
                     </select>
                 </h3>
 
             </div>
 
-        </div>
-
-        <div class="row" style="padding-top: 50px;">
-
+        </div>              
+              
+        <div class="row" style="padding-top: 50px;">              
+              
 
             <div class="col-md">
 
