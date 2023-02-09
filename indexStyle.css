@@ -74,8 +74,9 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background:url("desu.svg")rgba(29, 29, 29);  background-size:contain;
-    background-size:cover;
+    background:url("bgg-3.jpg")rgba(29, 29, 29);
+    background-position: center;
+   
 }   
 
 div *{
