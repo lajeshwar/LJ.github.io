@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <style>
+    @keyframes camo {
+      0% { fill: #f0f0f0; }
+      50% { fill: #999966; }
+      100% { fill: #f0f0f0; }
+    }
+  </style>
+  <rect width="300" height="300" fill="#f0f0f0" />
+  <path d="M30,50 L40,45 L50,55 L60,50 L70,45 L80,55 L90,50 L100,45 L110,55 L120,50 L130,45 L140,55 L150,50 L160,45 L170,55 L180,50 L190,45 L200,55 L210,50 L220,45 L230,55 L240,50 L250,45 L260,55 L270,50 L280,45" fill="#999966" />
+  <path d="M45,70 L55,65 L65,75 L75,70 L85,65 L95,75 L105,70 L115,65 L125,75 L135,70 L145,65 L155,75 L165,70 L175,65 L185,75 L195,70 L205,65 L215,75 L225,70 L235,65 L245,75 L255,70" fill="#999966" />
+  <path d="M60,90 L70,85 L80,95 L90,90 L100,85 L110,95 L120,90 L130,85 L140,95 L150,90 L160,85 L170,95 L180,90 L190,85 L200,95 L210,90 L220,85 L230,95 L240,90" fill="#999966" />
+  <animate attributeName="fill" dur="2s" values="#f0f0f0; #999966; #f0f0f0;" repeatCount="indefinite" />
+</svg>

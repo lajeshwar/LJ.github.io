@@ -1,0 +1,23 @@
+.flex-container {
+    display: flex;
+    background-color: brown;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+footer {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 10px;
+}
